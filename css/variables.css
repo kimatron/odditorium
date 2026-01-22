@@ -1,0 +1,55 @@
+/* ==========================================
+   CSS VARIABLES
+   All our design tokens in one place
+   ========================================== */
+
+:root {
+    /* 
+        COLORS
+        These are our brand colors that will be used throughout the site, big bold and in your face :)))
+    */
+    --primary: #ff7347;      /* Orange - main brand color */
+    --secondary: #d9f154;    /* Lime - accent color */
+    --accent: #4876ff;       /* Blue - for cart and highlights */
+    --dark: #27272a;         /* Almost black - for text */
+    --gray: #fffdf9;         /* Off-white - for backgrounds */
+    --light-gray: #e5e5e5;   /* Light gray - for borders */
+    
+    /* 
+        TYPOGRAPHY
+        Fluid typography scales smoothly between mobile and desktop
+        Uses clamp() for responsive sizing without media queries
+    */
+    --text-xs: clamp(0.78rem, 0.77rem + 0.03vw, 0.8rem);
+    --text-sm: clamp(0.94rem, 0.92rem + 0.11vw, 1rem);
+    --text-base: clamp(1.13rem, 1.08rem + 0.22vw, 1.25rem);
+    --text-lg: clamp(1.35rem, 1.28rem + 0.37vw, 1.56rem);
+    --text-xl: clamp(1.62rem, 1.5rem + 0.58vw, 1.95rem);
+    --text-2xl: clamp(1.94rem, 1.77rem + 0.87vw, 2.44rem);
+    --text-3xl: clamp(2.33rem, 2.08rem + 1.25vw, 3.05rem);
+    --text-4xl: clamp(2.8rem, 2.45rem + 1.77vw, 3.81rem);
+    
+    /* 
+        SPACING
+        Consistent spacing system for margins and padding
+    */
+    --spacing-xs: 0.5rem;    /* 8px */
+    --spacing-sm: 1rem;      /* 16px */
+    --spacing-md: 2rem;      /* 32px */
+    --spacing-lg: 4rem;      /* 64px */
+    --spacing-xl: 6rem;      /* 96px */
+    
+    /* 
+        FONTS
+        Font families for headings and body text
+    */
+    --font-display: 'Bowlby One SC', cursive;  /* Big bold headings */
+    --font-body: 'DM Mono', monospace;         /* Body text */
+    
+    /* 
+        TRANSITIONS
+        Standard timing for animations
+    */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
