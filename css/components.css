@@ -1,0 +1,137 @@
+/* ==========================================
+   COMPONENTS
+   Reusable components: buttons, cards, forms
+   ========================================== */
+
+/* ==========================================
+   CHUNKY BUTTON
+   The button with jagged edges and 3D effect - thank you code pen :)))
+   ========================================== */
+
+.chunky-button {
+    /* Display and positioning */
+    display: inline-block;
+    position: relative;
+    
+    /* Text styling */
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    
+    /* Spacing */
+    padding: 1rem 2rem;
+    
+    /* 
+       GRADIENT BACKGROUND
+       Creates a gradient that shifts on hover
+       - Starts at orange (top 33%)
+       - Transitions through middle
+       - Ends at lime (bottom 66%)
+       - 400% tall so most of it is hidden below
+       - On hover, we shift it up to show the lime
+    */
+    background: linear-gradient(
+        to bottom, 
+        var(--primary) 33%, 
+        var(--secondary) 66%
+    ) 50% 0% / 100% 400% no-repeat;
+    
+    /* 
+       DROP SHADOW
+       Creates the black outline effect
+       - 4 shadows for top, bottom, left, right (makes the border)
+       - 5th shadow creates the 3D offset (5px down and right)
+    */
+    filter: drop-shadow(0 1px 0 #000)      /* top border */
+            drop-shadow(-1px 0 0 #000)     /* left border */
+            drop-shadow(1px 0 0 #000)      /* right border */
+            drop-shadow(0 -1px 0 #000)     /* bottom border */
+            drop-shadow(5px 5px 0 #000);   /* 3D shadow */
+    
+    /* Animation */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+/* 
+   PSEUDO-ELEMENTS
+   Create the jagged edges on left and right sides
+   These inherit the gradient background
+*/
+
+/* Right side jagged edge */
+.chunky-button::before {
+    content: "";
+    position: absolute;
+    width: 1rem;              /* 16px wide */
+    height: 100%;             /* Full height of button */
+    top: 0;
+    right: -1px;              /* Sits just outside the button */
+    background: inherit;      /* Inherits the gradient */
+    
+    /* 
+       CLIP-PATH
+       Cuts the rectangle into a jagged shape
+       polygon() defines points to create the shape
+       Think of it like connect-the-dots
+    */
+    clip-path: polygon(
+        100% 0,      /* top right */
+        74% 28%,     /* jagged point */
+        100% 29%,    /* back to edge */
+        100% 70%,    /* down the edge */
+        84% 78%,     /* jagged point */
+        100% 100%,   /* bottom right */
+        0 100%,      /* bottom left */
+        0 0          /* back to start */
+    );
+}
+
+/* Left side jagged edge */
+.chunky-button::after {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 100%;
+    top: 0;
+    left: calc(-1rem + 1px);  /* Sits just outside the button on left */
+    background: inherit;
+    
+    /* Different jagged pattern for left side */
+    clip-path: polygon(
+        23% 19%,     /* jagged point */
+        0 0,         /* top left */
+        100% 0,      /* top right */
+        100% 100%,   /* bottom right */
+        0 100%,      /* bottom left */
+        29% 79%,     /* jagged point */
+        9% 80%,      /* jagged point */
+        0 33%        /* back to edge */
+    );
+}
+
+/* 
+   HOVER STATE
+   - Removes the 3D shadow (only keeps the border)
+   - Moves the button down and right by 5px (simulates push)
+   - Shifts gradient to show lime color
+*/
+.chunky-button:hover {
+    filter: drop-shadow(0 1px 0 #000) 
+            drop-shadow(-1px 0 0 #000)
+            drop-shadow(1px 0 0 #000) 
+            drop-shadow(0 -1px 0 #000);
+    transform: translate(5px, 5px);  /* Moves button to where shadow was */
+    background-position: 50% 100%;   /* Shifts gradient to show lime */
+}
+
+/* 
+   ACTIVE STATE (when clicking)
+   Makes button feel more responsive
+*/
+.chunky-button:active {
+    transform: translate(6px, 6px);  /* Push a tiny bit more */
+}
