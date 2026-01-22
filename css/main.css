@@ -1,0 +1,19 @@
+/* ==========================================
+   MAIN CSS FILE
+   Imports all other CSS files in the correct order, keeping it clean and avoiding spaghetti code.
+   ========================================== */
+
+/* 1. Variables must load first - everything else uses them */
+@import 'variables.css';
+
+/* 2. Base styles - reset, body, typography, nav, footer */
+@import 'base.css';
+
+/* 3. Components - buttons, product cards, forms  */
+@import 'components.css';
+
+/* 4. Page-specific styles - hero, features, cart, etc  */
+@import 'pages.css';
+
+/* 5. Responsive styles - media queries ) */
+@import 'responsive.css';

@@ -1,0 +1,200 @@
+/* ==========================================
+   BASE STYLES
+   Reset, body, typography, navigation, footer
+   ========================================== */
+
+/* 
+   CSS RESET
+   Remove default browser styles for consistency
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Makes width calculations include padding and border */
+}
+
+/* Smooth scrolling when clicking anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 
+   BODY STYLES
+   Sets up the basic look of the page
+*/
+body {
+    font-family: var(--font-body);
+    background: url('https://assets.codepen.io/1385231/bg-texture.webp') no-repeat center center;
+    background-size: cover;
+    background-color: var(--gray);
+    color: var(--dark);
+    padding: 12px;  /* Small padding around entire page */
+    line-height: 1.6;  /* Space between lines of text */
+}
+
+/* 
+   TYPOGRAPHY
+   Headings and text styles
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;  /* ALL CAPS for headings */
+    line-height: 1.2;  /* Tighter line height for headings */
+    font-weight: 700;
+}
+
+h1 { font-size: var(--text-3xl); }
+h2 { font-size: var(--text-2xl); }
+h3 { font-size: var(--text-xl); }
+h4 { font-size: var(--text-lg); }
+
+/* Accent color for highlighted text */
+.accent {
+    color: var(--primary);
+}
+
+/* Remove default link underlines */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+/* Remove bullet points from lists */
+ul {
+    list-style: none;
+}
+
+/* 
+   CONTAINER
+   Centers content and limits max width
+   Used on every page to keep content readable
+*/
+.container {
+    max-width: 1200px;  /* Content never gets wider than this */
+    margin: 0 auto;     /* Centers the container */
+    width: 100%;
+    padding: 0 var(--spacing-md);  /* Breathing room on sides */
+}
+
+/* ==========================================
+   NAVIGATION BAR
+   ========================================== */
+
+.navbar {
+    padding: var(--spacing-md) 0;
+    margin-bottom: var(--spacing-lg);
+    background: var(--gray);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;  /* Logo left, menu right */
+    align-items: center;
+    flex-wrap: wrap;  /* Wraps on small screens */
+    gap: var(--spacing-sm);
+}
+
+/* Logo styling */
+.logo h1 {
+    font-size: var(--text-2xl);
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-md);  /* Space between links */
+    align-items: center;
+}
+
+/* Navigation links */
+.nav-menu a {
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+    transition: var(--transition-fast);
+}
+
+/* Hover and active states */
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary);
+}
+
+/* Special styling for cart link */
+.cart-link {
+    position: relative;
+    background: var(--accent);
+    color: white !important;
+}
+
+.cart-link:hover {
+    background: var(--primary);
+}
+
+/* Cart counter badge */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--secondary);
+    color: var(--dark);
+    font-size: var(--text-xs);
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;  /* Makes it circular */
+    min-width: 20px;
+    text-align: center;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    background: var(--dark);
+    color: white;
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* Footer grid layout - 3 columns */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer h3, 
+.footer h4 {
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.footer p {
+    color: #b0b0b0;
+    margin-bottom: var(--spacing-xs);
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.footer a {
+    color: #b0b0b0;
+}
+
+.footer a:hover {
+    color: var(--primary);
+}
+
+/* Copyright bar at bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid #444;
+    color: #b0b0b0;
+}
