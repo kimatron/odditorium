@@ -1,0 +1,193 @@
+/* ==========================================
+   RESPONSIVE STYLES
+   Media queries for mobile, tablet, desktop
+   ========================================== */
+
+/* 
+   MOBILE FIRST APPROACH
+   Base styles are for mobile, these rules adjust for larger screens
+*/
+
+/* ==========================================
+   TABLET & SMALL DESKTOP (768px and up)
+   ========================================== */
+
+@media (min-width: 768px) {
+    /* Container gets more padding on larger screens */
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Stagger product cards on larger screens */
+    .product-card:nth-child(even) {
+        margin-top: 4rem;
+    }
+}
+
+/* ==========================================
+   MOBILE & SMALL TABLETS (max 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Navigation stacks vertically on mobile */
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    /* Features grid becomes single column */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Product grid smaller columns */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+    
+    /* Remove stagger on mobile */
+    .product-card:nth-child(even) {
+        margin-top: 0;
+    }
+    
+    /* Filter bar stacks vertically */
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .results-count {
+        text-align: center;
+    }
+    
+    /* Artist cards single column */
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Cart layout stacks */
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Cart summary no longer sticky on mobile */
+    .cart-summary {
+        position: static;
+    }
+    
+    /* Cart item layout adjusts */
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Cart controls move to new row */
+    .cart-item-controls {
+        grid-column: 1 / -1;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Contact form stacks */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer stacks */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* Social links center on mobile */
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* ==========================================
+   VERY SMALL MOBILE (max 480px)
+   ========================================== */
+
+@media (max-width: 480px) {
+    /* Reduce body padding */
+    body {
+        padding: 8px;
+    }
+    
+    /* Smaller text sizes */
+    .hero-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-2xl);
+    }
+    
+    /* Product grid single column */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Smaller product cards */
+    .product-card {
+        padding: 0.75rem 1rem 0 1rem;
+        max-width: 100%;
+    }
+    
+    /* Navigation menu wraps better */
+    .nav-menu {
+        gap: var(--spacing-xs);
+    }
+    
+    .nav-menu a {
+        font-size: var(--text-sm);
+        padding: var(--spacing-xs);
+    }
+    
+    /* Smaller buttons on mobile */
+    .chunky-button {
+        font-size: var(--text-sm);
+        padding: 0.75rem 1.5rem;
+    }
+    
+    /* Filter bar elements stack */
+    .filter-select {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   LARGE DESKTOP (1200px and up)
+   ========================================== */
+
+@media (min-width: 1200px) {
+    /* Larger container max width */
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* More columns for product grid on large screens */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

@@ -535,3 +535,111 @@
     width: 100%;
     margin-top: var(--spacing-md);
 }
+
+/* ==========================================
+   CONTACT PAGE
+   Contact form and information
+   ========================================== */
+
+.contact-section {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* Contact container - 2 column layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-xl);
+}
+
+/* Left column - contact info */
+.contact-info {
+    background: white;
+    padding: var(--spacing-lg);
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+}
+
+.contact-info h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-info > p {
+    color: var(--mid-gray);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Contact details boxes */
+.contact-details {
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-detail {
+    padding: var(--spacing-md);
+    background: var(--gray);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-detail h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary);
+}
+
+.contact-detail p {
+    color: var(--dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-detail a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.contact-detail a:hover {
+    color: var(--dark);
+}
+
+.small-text {
+    font-size: var(--text-sm);
+    color: var(--mid-gray) !important;
+}
+
+/* Response time box */
+.response-time {
+    padding: var(--spacing-md);
+    background: var(--secondary);
+    border-radius: var(--radius-sm);
+}
+
+.response-time h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--spacing-xs);
+}
+
+.response-time p {
+    font-size: var(--text-sm);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Right column - contact form */
+.contact-form-container {
+    background: white;
+    padding: var(--spacing-lg);
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-form-container h2 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-form {
+    /* Form styles are in components.css */
+}
