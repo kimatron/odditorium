@@ -115,3 +115,96 @@
     color: var(--mid-gray);
     line-height: 1.6;
 }
+
+/* ==========================================
+   PRODUCTS PAGE
+   Filter bar and product display
+   ========================================== */
+
+/* Page header section */
+.page-header {
+    background: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+    padding: var(--spacing-lg) 0;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.page-header h1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+    color: var(--mid-gray);
+    font-size: var(--text-lg);
+}
+
+/* Products section container */
+.products-section {
+    padding-bottom: var(--spacing-lg);
+}
+
+/* 
+   FILTER BAR
+   Contains category filter, sort filter, and results count
+*/
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    
+    /* Styling */
+    background: white;
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Individual filter group (label + select) */
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+/* Select dropdown styling */
+.filter-select {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-sm);
+    background: white;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.filter-select:hover {
+    border-color: var(--primary);
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 115, 71, 0.1);
+}
+
+/* Results counter */
+.results-count {
+    color: var(--mid-gray);
+    font-weight: 600;
+}
+
+/* ==========================================
+   CART PAGE
+   Cart items list and summary
+   ========================================== */

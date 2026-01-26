@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Browse Products - The Odditorium</title>
+    <meta name="description" content="Browse our collection of bizarre handmade goods. Filter by category and find unique pieces from eccentric artisans.">
+    <meta name="keywords" content="shop, products, handmade, unique gifts, artisan crafts">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation (same on all pages) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>The <span class="accent">Odditorium</span></h1>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Browse</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        Cart <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Collection</h1>
+                <p>Browse through our curated selection of bizarre handmade treasures</p>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <!-- 
+                    Filter Bar
+                    Allows users to filter by category and sort products
+                -->
+                <div class="filter-bar">
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">All Oddities</option>
+                            <option value="teeth">Teeth Things</option>
+                            <option value="hair">Hair & Fur</option>
+                            <option value="tears">Tear-Based</option>
+                            <option value="nails">Nail Clippings</option>
+                            <option value="misc">Misc Weird</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Sort Filter -->
+                    <div class="filter-group">
+                        <label for="sort-filter">Sort by:</label>
+                        <select id="sort-filter" class="filter-select">
+                            <option value="featured">Most Disturbing</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Results Counter -->
+                    <div class="results-count">
+                        Showing <span id="results-count">10</span> peculiar items
+                    </div>
+                </div>
+
+                <!-- 
+                    Products Grid
+                    JavaScript will fill this with product cards
+                -->
+                <div class="product-grid" id="products-grid">
+                    <!-- Products loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same on all pages) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>The Odditorium</h3>
+                    <p>Connecting weird artists with people brave enough to buy their stuff.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Questions?</h4>
+                    <p>Email: weird@odditorium.ie</p>
+                    <p>Phone: +353 51 ODD STUFF</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Odditorium. We're as confused as you are.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/products-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
