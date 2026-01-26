@@ -1,0 +1,45 @@
+/* ==========================================
+   PAGE STYLES
+   Page-specific styles: hero, features, cart, etc
+   ========================================== */
+
+/* ==========================================
+   HERO SECTION (Homepage)
+   The big title area at the top of the homepage
+   ========================================== */
+
+.hero {
+    /* Spacing */
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    
+    /* Background */
+    background: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+    
+    /* Make sure it's tall enough */
+    min-height: 60vh;
+    
+    /* Center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The big title */
+.hero-title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--dark);
+    max-width: 900px;  /* Keeps lines from getting too long */
+}
+
+/* The subtitle text */
+.hero-subtitle {
+    font-size: var(--text-lg);
+    color: var(--mid-gray);
+    margin-bottom: var(--spacing-lg);
+    max-width: 700px;  /* Narrower than title for readability */
+    line-height: 1.8;  /* More space between lines */
+}
