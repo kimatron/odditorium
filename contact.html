@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Contact Us - The Odditorium</title>
+    <meta name="description" content="Get in touch with The Odditorium. Send us your questions, custom order requests, or just say hello.">
+    <meta name="keywords" content="contact, custom orders, questions, get in touch">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>The <span class="accent">Odditorium</span></h1>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Browse</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">
+                        Cart <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p>Questions? Custom orders? Just want to chat about weird stuff?</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <p>We'd love to hear from you! Whether you have questions about our products, want to discuss a custom commission, or just want to share your appreciation for the bizarre.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <h3>Email</h3>
+                                <p><a href="mailto:weird@odditorium.ie">weird@odditorium.ie</a></p>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <h3>Phone</h3>
+                                <p>+353 51 ODD STUFF</p>
+                                <p class="small-text">(Mon-Fri, 9am-5pm)</p>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <h3>Location</h3>
+                                <p>Waterford, Ireland</p>
+                                <p class="small-text">We operate online but our artists are based locally</p>
+                            </div>
+                        </div>
+                        
+                        <div class="response-time">
+                            <h3>Response Time</h3>
+                            <p>We typically respond within 24-48 hours. Custom order inquiries may take longer as we connect you with the right artist.</p>
+                        </div>
+                    </div>
+
+                    <!-- 
+                        Contact Form
+                        HTML5 validation attributes used:
+                        - required
+                        - type="email"
+                        - minlength
+                        - pattern
+                    -->
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        
+                        <form class="contact-form" id="contact-form">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    minlength="2"
+                                    placeholder="Enter your name"
+                                    class="form-input"
+                                >
+                                <span class="error-message" id="name-error"></span>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <label for="email">Your Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    placeholder="your.email@example.com"
+                                    class="form-input"
+                                >
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+
+                            <!-- Phone Field (Optional) -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    pattern="[0-9+\s\-\(\)]+"
+                                    placeholder="+353 51 123 4567"
+                                    class="form-input"
+                                >
+                                <span class="error-message" id="phone-error"></span>
+                            </div>
+
+                            <!-- Subject Field -->
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select 
+                                    id="subject" 
+                                    name="subject" 
+                                    required
+                                    class="form-input"
+                                >
+                                    <option value="">Select a subject...</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="custom">Custom Order Request</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="shipping">Shipping Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="error-message" id="subject-error"></span>
+                            </div>
+
+                            <!-- Message Field -->
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    required 
+                                    minlength="10"
+                                    rows="6"
+                                    placeholder="Tell us what's on your mind..."
+                                    class="form-input"
+                                ></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+
+                            <!-- Newsletter Checkbox -->
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input 
+                                        type="checkbox" 
+                                        id="newsletter" 
+                                        name="newsletter"
+                                        class="checkbox-input"
+                                    >
+                                    <span>Send me updates about new weird stuff</span>
+                                </label>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="chunky-button submit-btn">
+                                Send Message
+                            </button>
+
+                            <!-- Success Message (hidden by default) -->
+                            <div class="success-message" id="success-message" style="display: none;">
+                                <p>Thanks for reaching out! We'll get back to you soon.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>The Odditorium</h3>
+                    <p>Connecting weird artists with people brave enough to buy their stuff.</p>
+                    
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Questions?</h4>
+                    <p>Email: weird@odditorium.ie</p>
+                    <p>Phone: +353 51 ODD STUFF</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Odditorium. We're as confused as you are.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/products-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
