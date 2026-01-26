@@ -205,11 +205,6 @@
 }
 
 /* ==========================================
-   CART PAGE
-   Cart items list and summary
-   ========================================== */
-
-   /* ==========================================
    ABOUT PAGE
    Artist bios and FAQ section
    ========================================== */
@@ -365,3 +360,178 @@
     line-height: 1.8;
 }
 
+/* ==========================================
+   CART PAGE
+   Shopping cart display and summary
+   ========================================== */
+
+.cart-section {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* Cart container - 2 column layout */
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+/* Left column - cart items */
+.cart-items {
+    background: white;
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Empty cart state */
+.empty-cart {
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.empty-cart h2 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+}
+
+.empty-cart p {
+    font-size: var(--text-lg);
+    color: var(--mid-gray);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Individual cart item */
+.cart-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-bottom: 2px solid var(--light-gray);
+    align-items: center;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Cart item image */
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-sm);
+}
+
+/* Cart item details */
+.cart-item-details h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--spacing-xs);
+}
+
+.cart-item-artist {
+    color: var(--mid-gray);
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.cart-item-price {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Cart item controls (quantity, remove) */
+.cart-item-controls {
+    text-align: right;
+}
+
+/* Quantity control buttons */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    justify-content: flex-end;
+    margin-bottom: var(--spacing-sm);
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--dark);
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border-radius: var(--radius-sm);
+}
+
+.quantity-btn:hover {
+    background: var(--secondary);
+}
+
+.quantity-display {
+    min-width: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Remove button */
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
+}
+
+.remove-btn:hover {
+    color: var(--dark);
+}
+
+/* Right column - cart summary */
+.cart-summary {
+    background: white;
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    height: fit-content;
+    
+    /* Sticky on scroll */
+    position: sticky;
+    top: 100px;
+}
+
+.cart-summary h3 {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--dark);
+}
+
+/* Summary rows (subtotal, shipping, total) */
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--text-base);
+}
+
+.summary-row.total {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    padding-top: var(--spacing-sm);
+    border-top: 2px solid var(--dark);
+    margin-top: var(--spacing-md);
+    color: var(--primary);
+}
+
+/* Checkout button */
+.checkout-btn {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}

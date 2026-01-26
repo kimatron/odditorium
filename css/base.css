@@ -198,3 +198,37 @@ ul {
     border-top: 1px solid #444;
     color: #b0b0b0;
 }
+
+/* ==========================================
+   SOCIAL MEDIA LINKS
+   Icons in footer
+   ========================================== */
+
+/* .social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--dark);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.social-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+} */
