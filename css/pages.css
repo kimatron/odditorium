@@ -44,6 +44,7 @@
     line-height: 1.8;  /* More space between lines */
 }
 
+/* ==========================================
    SECTION HEADERS
    Used throughout the site for section titles
    ========================================== */
@@ -62,4 +63,55 @@
 .section-subtitle {
     font-size: var(--text-base);
     color: var(--mid-gray);
+}
+
+/* ==========================================
+   FEATURES SECTION (Homepage)
+   The 4 benefit cards
+   ========================================== */
+
+.features-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--cream);  /* Slightly darker background */
+}
+
+/* Grid layout for feature cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Individual feature card */
+.feature-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    
+    /* Border effect */
+    border: 2px solid var(--dark);
+    
+    /* Shadow */
+    box-shadow: var(--shadow-sm);
+    
+    /* Smooth transition for hover */
+    transition: var(--transition-normal);
+}
+
+/* Hover effect - card lifts up */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+    font-size: var(--text-xl);
+}
+
+.feature-card p {
+    color: var(--mid-gray);
+    line-height: 1.6;
 }
