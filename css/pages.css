@@ -43,3 +43,23 @@
     max-width: 700px;  /* Narrower than title for readability */
     line-height: 1.8;  /* More space between lines */
 }
+
+   SECTION HEADERS
+   Used throughout the site for section titles
+   ========================================== */
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark);
+}
+
+.section-subtitle {
+    font-size: var(--text-base);
+    color: var(--mid-gray);
+}
