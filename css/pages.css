@@ -208,3 +208,160 @@
    CART PAGE
    Cart items list and summary
    ========================================== */
+
+   /* ==========================================
+   ABOUT PAGE
+   Artist bios and FAQ section
+   ========================================== */
+
+/* About content text section */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.about-content h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.about-content p {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+    color: var(--mid-gray);
+}
+
+/* Artists section */
+.artists-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.artists-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Artist cards grid */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Individual artist card */
+.artist-card {
+    background: white;
+    padding: var(--spacing-md);
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition-normal);
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Placeholder for artist image */
+.artist-image-placeholder {
+    width: 150px;
+    height: 150px;
+    background: var(--light-gray);
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    border: 3px solid var(--dark);
+}
+
+.artist-card h3 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--dark);
+}
+
+.artist-specialty {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.artist-card p {
+    color: var(--mid-gray);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   FAQ SECTION
+   Uses HTML5 <details> and <summary>
+   ========================================== */
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Individual FAQ item */
+.faq-item {
+    background: white;
+    border: 2px solid var(--dark);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+}
+
+/* 
+   The <summary> element
+   This is the clickable question part
+*/
+.faq-item summary {
+    padding: var(--spacing-md);
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition-fast);
+    
+    /* Remove default marker (triangle) */
+    list-style: none;
+}
+
+/* Hide default marker in Firefox */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Add custom marker using ::before */
+.faq-item summary::before {
+    content: "+";
+    margin-right: var(--spacing-sm);
+    font-size: var(--text-xl);
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Change marker when open */
+.faq-item[open] summary::before {
+    content: "−";
+}
+
+/* Hover effect on question */
+.faq-item summary:hover {
+    background: var(--gray);
+    color: var(--primary);
+}
+
+/* 
+   The answer (inside <details> but not <summary>)
+*/
+.faq-item p {
+    padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    color: var(--mid-gray);
+    line-height: 1.8;
+}
+
