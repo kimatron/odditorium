@@ -6,7 +6,7 @@
 :root {
     /* 
         COLORS
-        These are our brand colors that will be used throughout the site, big bold and in your face :)))
+        These are our brand colors that we'll use throughout the site
     */
     --primary: #ff7347;      /* Orange - main brand color */
     --secondary: #d9f154;    /* Lime - accent color */
@@ -14,6 +14,9 @@
     --dark: #27272a;         /* Almost black - for text */
     --gray: #fffdf9;         /* Off-white - for backgrounds */
     --light-gray: #e5e5e5;   /* Light gray - for borders */
+    --mid-gray: #6b7280;     /* Medium gray - for secondary text */
+    --cream: #faf8f3;        /* Cream - for sections */
+    --off-white: #ffffff;    /* Pure white */
     
     /* 
         TYPOGRAPHY
@@ -52,4 +55,20 @@
     */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
+    
+    /* 
+        BORDER RADIUS
+        Rounded corners
+    */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    
+    /* 
+        SHADOWS
+        Box shadow presets
+    */
+    --shadow-sm: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    --shadow-md: 4px 4px 0 rgba(0, 0, 0, 0.15);
+    --shadow-lg: 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
