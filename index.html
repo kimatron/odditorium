@@ -19,14 +19,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Our CSS file (we'll create this next) -->
+    <!-- CSS file  -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!-- 
         NAVIGATION BAR
-        This will be the same on all pages
-        We'll style this later in base.css
     -->
     <nav class="navbar">
         <div class="container">
@@ -52,10 +50,9 @@
 
     <!-- 
         MAIN CONTENT AREA
-        This is where the page-specific content goes
     -->
     <main>
-        <!-- Hero Section: Big title and intro text -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h2 class="hero-title">Bizarre Creations From Questionable Artists</h2>
@@ -74,8 +71,7 @@
                 </div>
 
                 <!-- 
-                    Product grid - will be filled by JavaScript later
-                    We use an ID so JavaScript can find it easily
+                    Product grid - filled by JavaScript
                 -->
                 <div class="product-grid" id="featured-products">
                     <!-- JavaScript will add product cards here -->
@@ -160,19 +156,19 @@
                 <div class="footer-section">
                     <h4>Questions?</h4>
                     <p>Email: weird@odditorium.ie</p>
-                    <p>Phone: +353 51 123456</p>
+                    <p>Phone: +353 51 ODD STUFF</p>
                 </div>
             </div>
             
             <!-- Copyright -->
             <div class="footer-bottom">
-                <p>&copy; 2024 The Odditorium. We're as confused as you are.</p>
+                <p>&copy; 20246The Odditorium. We're as confused as you are.</p>
             </div>
         </div>
     </footer>
 
     <!-- 
-        Cart.js must load first because other scripts use the cart object
+        JavaScript files (we'll create these later)        Cart.js must load first because other scripts use the cart object
     -->
     <script src="js/products-data.js"></script>
     <script src="js/cart.js"></script>
