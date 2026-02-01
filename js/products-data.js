@@ -7,38 +7,38 @@ const allProducts = [
     // Teeth Category
     {
         id: 'wisdom-tooth-earrings',
-        name: 'Wisdom Tooth Drop Earrings',
+        name: 'Canine Tooth Drop Earrings',
         artist: 'Dr. Molar\'s Oddities',
         price: 45.00,
         category: 'teeth',
         badge: 'Fresh',
-        image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop'
+        image: 'images/product4.png'
     },
     {
         id: 'baby-tooth-ring',
-        name: 'Baby Tooth Signet Ring',
+        name: 'Carved Baby Tooth Ring',
         artist: 'Dr. Molar\'s Oddities',
         price: 38.00,
         category: 'teeth',
-        image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop'
+        image: 'images/product2.png'
     },
     
     // Hair & Fur Category
     {
         id: 'cat-whisker-necklace',
-        name: 'Cat Whisker Pendant',
-        artist: 'Feline Finds',
+        name: 'Belly Button Fluff Display',
+        artist: 'Johnny Weird',
         price: 32.00,
         category: 'hair',
-        image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop'
+        image: 'images/product6.png'
     },
     {
         id: 'pet-fur-yarn',
-        name: 'Spun Pet Fur Yarn',
+        name: 'Squirrel Purse',
         artist: 'Feline Finds',
         price: 24.00,
         category: 'hair',
-        image: 'https://images.unsplash.com/photo-1586339277861-b0b895343ba5?w=400&h=400&fit=crop'
+        image: 'images/product8.png'
     },
     
     // Tears Category
@@ -49,15 +49,15 @@ const allProducts = [
         price: 68.00,
         category: 'tears',
         badge: 'Popular',
-        image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop'
+        image: 'images/product5.png'
     },
     {
         id: 'happy-tears-candle',
-        name: 'Happy Tears Candle',
+        name: 'Potato Light Candle Made With Happy Tears',
         artist: 'Emotional Alchemy',
         price: 18.00,
         category: 'tears',
-        image: 'https://images.unsplash.com/photo-1602874801006-2b8b4f7d3a62?w=400&h=400&fit=crop'
+        image: 'images/product7.png'
     },
     
     // Nail Clippings Category
@@ -67,7 +67,7 @@ const allProducts = [
         artist: 'The Keratin Collective',
         price: 125.00,
         category: 'nails',
-        image: 'https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400&h=400&fit=crop'
+        image: 'images/product1.png'
     },
     {
         id: 'toenail-coasters',
@@ -75,6 +75,6 @@ const allProducts = [
         artist: 'The Keratin Collective',
         price: 42.00,
         category: 'nails',
-        image: 'https://images.unsplash.com/photo-1586874473302-bc6c60e6e641?w=400&h=400&fit=crop'
+        image: 'images/product5.png'
     }
 ];
