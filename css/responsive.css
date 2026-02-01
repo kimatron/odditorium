@@ -29,15 +29,32 @@
    ========================================== */
 
 @media (max-width: 768px) {
-    /* Navigation stacks vertically on mobile */
-    .nav-container {
-        flex-direction: column;
-        text-align: center;
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
     }
     
+    /* Hide navigation by default on mobile */
     .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--gray);
+        flex-direction: column;
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-lg);
+        display: none;  /* Hidden by default */
+    }
+    
+    /* Show menu when active */
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    /* Navigation stacks vertically on mobile */
+    .nav-container {
+        position: relative;
     }
     
     /* Hero section adjustments */

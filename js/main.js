@@ -5,16 +5,40 @@
 
 // Wait for page to fully load
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('Page loaded');
+    console.log('Products available:', allProducts.length);
+    
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
     
     // Initialize homepage
     if (document.getElementById('featured-products')) {
+        console.log('Homepage detected - rendering featured products');
         // Show first 4 products on homepage
         const featuredProducts = allProducts.slice(0, 4);
         renderProducts(featuredProducts, 'featured-products');
+        console.log('Featured products rendered');
     }
     
     // Initialize products page
     if (document.getElementById('products-grid')) {
+        console.log('Products page detected');
         // Show all products
         let currentProducts = [...allProducts];
         renderProducts(currentProducts, 'products-grid');
@@ -49,12 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize cart page
     if (document.getElementById('cart-items')) {
+        console.log('Cart page detected');
         cart.renderCart();
     }
     
     // Initialize contact form
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
+        console.log('Contact form detected');
         contactForm.addEventListener('submit', handleContactSubmit);
     }
 });

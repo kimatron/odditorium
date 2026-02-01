@@ -23,16 +23,25 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-container">
+                <!-- Logo/Site name -->
                 <div class="logo">
                     <h1>The <span class="accent">Odditorium</span></h1>
                 </div>
                 
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                <!-- Hamburger Menu Button (hidden on desktop) -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation links -->
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="products.html">Browse</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html" class="cart-link active">
+                    <li><a href="cart.html" class="cart-link">
                         Cart <span class="cart-count">0</span>
                     </a></li>
                 </ul>
