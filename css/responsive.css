@@ -70,8 +70,18 @@
     
     /* Product grid smaller columns */
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
+    }
+    
+    /* Product cards more compact on tablet/mobile */
+    .product-card {
+        min-height: 380px;
+    }
+    
+    /* Show add to cart button on tablet/mobile */
+    .product-button-wrapper {
+        opacity: 1;
     }
     
     /* Remove stagger on mobile */
@@ -109,19 +119,38 @@
         position: static;
     }
     
-    /* Cart item layout adjusts */
+    /* Cart item - complete mobile redesign */
     .cart-item {
-        grid-template-columns: 80px 1fr;
+        display: flex;
+        flex-direction: column;
         gap: var(--spacing-sm);
+        padding: var(--spacing-md);
+        text-align: center;
     }
     
-    /* Cart controls move to new row */
+    /* Center the image */
+    .cart-item-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    
+    /* Cart details centered */
+    .cart-item-details {
+        text-align: center;
+    }
+    
+    /* Cart controls centered below */
     .cart-item-controls {
-        grid-column: 1 / -1;
-        text-align: left;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: var(--spacing-sm);
         align-items: center;
+    }
+    
+    /* Quantity control centered */
+    .quantity-control {
+        justify-content: center;
     }
     
     /* Contact form stacks */
@@ -165,10 +194,23 @@
         grid-template-columns: 1fr;
     }
     
-    /* Smaller product cards */
+    /* Fix product cards on mobile */
     .product-card {
-        padding: 0.75rem 1rem 0 1rem;
+        padding: 1rem;
         max-width: 100%;
+        min-height: 350px;  /* Shorter on mobile */
+    }
+    
+    /* Make button always visible on mobile */
+    .product-button-wrapper {
+        opacity: 1;  /* Always show button on mobile */
+        margin-top: 0.5rem;
+    }
+    
+    /* Fix feature cards on mobile */
+    .feature-card {
+        min-height: auto;  /* Remove min-height on mobile */
+        padding: var(--spacing-md);
     }
     
     /* Navigation menu wraps better */
