@@ -4,8 +4,8 @@
 
 A 5-page responsive e-commerce website showcasing bizarre handmade goods from eccentric artisans. Built as a web development project demonstrating HTML5, CSS3, and vanilla JavaScript skills.
 
-**Live Site:** [Coming Soon]  
-**Developer:** Kim  
+**Live Site:** [(https://odditorium.netlify.app/)]  
+**Developer:** Kim Hanlon
 **Course:** FIT Web Development Apprenticeship  
 **Institution:** Mastercard Dublin
 
